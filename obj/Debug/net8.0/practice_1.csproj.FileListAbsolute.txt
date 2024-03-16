@@ -12,3 +12,4 @@
 /Users/erickvalencia/c_sharp/practice_1/obj/Debug/net8.0/practice_1.pdb
 /Users/erickvalencia/c_sharp/practice_1/obj/Debug/net8.0/practice_1.genruntimeconfig.cache
 /Users/erickvalencia/c_sharp/practice_1/obj/Debug/net8.0/ref/practice_1.dll
+/Users/erickvalencia/c_sharp/practice_1/obj/Debug/net8.0/practice_1.sourcelink.json
