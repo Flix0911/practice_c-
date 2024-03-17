@@ -3,4 +3,6 @@
 
 - C# tutorial for beginners - 2. Variables & data types: Completed
 
-- C# tytorial for beginners - 3. Type casting (implicity vs explicit)
+- C# tutorial for beginners - 3. Type casting (implicity vs explicit): Completed
+
+- C# tutorial for beginners - 4. Stack vs. Heap (Compiler deep dive)
