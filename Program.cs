@@ -141,14 +141,14 @@
 // long bigNum2 = num2;
 
 // explicit
-double x = 1235.8;
-int a;
+// double x = 1235.8;
+// int a;
 // Cast double to int
 // cast is (int)x; ~ EXPLICITY CONVERSION
 // a = x; ~ will tell you that you are missing a cast
 // if program is covered in cast, maybe look at what you're doing
-a = (int)x;
-Console.WriteLine(a);
+// a = (int)x;
+// Console.WriteLine(a);
 
 // Casting can be dangerous ~ could go wrong at runtime
 // Effects of that casting could trickle down to other parts of the program *****
@@ -157,19 +157,58 @@ Console.WriteLine(a);
 // important conversion
 // How do we convert a string to an int
 
-string value = "54534534"; //will give us success
+// string value = "54534534"; //will give us success
 // string value = "hsdljahskldjahs"; //will give failure
 
-int result = 0;
+// int result = 0;
 
 // TryParse, can throw into if/else, before it passess it to other parts of the program
 // if it works "out' will assign it to the result
 // If it doesn't work, it'll just failure
-if(int.TryParse(value, out result))
-{
-    Console.WriteLine("Success: " + result);
-}
-else 
-{
-    Console.WriteLine("Failure");
-}
+// if(int.TryParse(value, out result))
+// {
+//     Console.WriteLine("Success: " + result);
+// }
+// else 
+// {
+//     Console.WriteLine("Failure");
+// }
+
+
+
+// ------------------------------------------
+
+
+
+// Lesson 4
+
+// How does the stack and the heap work
+
+// Stack is for the value type and a Heap is for reference types
+
+// (object reference warning ~ could be a hint)
+// Computer is storing data on what type it is, and storing on the stack vs the heap. ~ Lets learn what's the difference
+
+// int, named testValue, that is 4 ~ pretty low level
+using PracticeTutorial;
+
+int testValue = 4;
+// very low level
+byte lowLevelValue = 3;
+// Boolean value
+bool boolValue = false; //stored on the stack ~ small value
+
+// string ~ value type
+string stringValue = "string";
+
+Console.WriteLine(stringValue);
+
+// control + . to bring it in
+// This is a big object ~ it's labeled and you can get it when you want to
+MyNewClass stackHeap = new MyNewClass();
+
+stackHeap.AddFive(1);
+
+// Stack hgas to be accessed exactly as it sounds ~ small sources of data {stack is for value types}
+// Heap, has no structure/order, you can pull from it ~ large sources of data {can store large objects or references of data}
+// ****BEGINNERS SAKE****

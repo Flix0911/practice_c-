@@ -5,4 +5,6 @@
 
 - C# tutorial for beginners - 3. Type casting (implicity vs explicit): Completed
 
-- C# tutorial for beginners - 4. Stack vs. Heap (Compiler deep dive)
+- C# tutorial for beginners - 4. Stack vs. Heap (Compiler deep dive): Completed
+
+- C# tutorial for beginners - 5. Arrays in-depth: In Progress
