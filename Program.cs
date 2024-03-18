@@ -239,32 +239,106 @@
 // int[] ~ array of ints
 // intArray is the name of the array
 // new int[2] ~ going to tel lit to correct the array ~ newing up ~ creating an object
-int[] intArray = new int[2];
+// int[] intArray = new int[2];
 
 // string is a reference type and will be null ~ not 0
-string[] strArray = new string[2];
+// string[] strArray = new string[2];
 
 // declared an object ~ don't do this. You can put anything you want, but it's dangerous and could be multiple data types
 // initialize 4 null values
-object[] objArray = new object[4];
+// object[] objArray = new object[4];
 
 // bracket notation below
-intArray[0] = 1;
+// intArray[0] = 1;
 
-Console.WriteLine(intArray);
+// Console.WriteLine(intArray);
 
 // dynamic arrays
 
 
-int[] staticIntArray = new int[] {1,2,3,4,5};
+// int[] staticIntArray = new int[] {1,2,3,4,5};
 
 // pick certain ones out, linq
 // Array.
 
 // Average() is a method
 // Notice after the . a lot of methods
-staticIntArray.Average();
+// staticIntArray.Average();
 // Right click on array and look at definitions
-Array.Sort(staticIntArray);
+// Array.Sort(staticIntArray);
 
-Console.WriteLine(staticIntArray);
+// Console.WriteLine(staticIntArray);
+
+
+// ------------------------------------------
+
+
+//Lesson 7
+
+// String is a reference type
+
+using System.Text;
+
+string testString = "test";
+// Above is what is going on at the lower level ~ string think ""
+// Char is a single quote
+// Str is made of char and converted to a CLR at runtime
+char[] testLowLevel = new[] {'t', 'e', 's', 't'};
+
+// Uppercase String
+// Is there a difference, no difference in Microsoft's eyes. Treat as equalivant
+String testStringStatic = "testSta";
+
+// String is going to have more extension Methods
+
+// How do we initialize a string
+
+string message; //null value
+
+string message2 = null; //can initialize as null
+
+// IMPORTANT IMPORTANT IMPORTANT - VALUE TYPES CANNOT BE NULL
+// int testInt = null; //Can't do that with an int, only a str can initialize as a null
+
+
+// Literal VS. Verbatim
+
+// Literal ~ seen in file paths
+// Will use string escape sequences
+string filePath = "c:\\ProgramFiles";
+
+// Verbatim
+string filePathVerbatim = @"c:\ProgramFiles";
+
+// str in c# are immutable
+// str immutability (Read only) - Garbage Collector will pick up the old variable
+// Threading - Race Conditions ~ If 2 variables accessing at the same time, can cause race conditions
+// Immutability helps reduce threading issues
+
+string s1 = "Hello ";
+string s2 = s1;
+s1 += "World";
+
+Console.WriteLine(s2);
+
+// string interpolation + composite formatting
+
+string firstName = "Erick";
+string lastName = "Valencia";
+
+// string interpolation
+
+Console.WriteLine($"My name is {firstName} {lastName}", "String interpolation");
+
+// composite formatting
+
+Console.WriteLine("My name {0} {1}", firstName, lastName, "composite formatting");
+
+// String builder
+// if you are performing a thousand examples: For loop with 1000 examples
+
+// Create the object and you need to append
+var sb = new StringBuilder();
+
+ var testStringBuilder = sb.Append(firstName);
+Console.WriteLine(lastName);

@@ -9,4 +9,4 @@
 
 - C# tutorial for beginners - 5. Arrays in-depth: Completed
 
-- C# tutorial for beginners - 6. String in-depth: In-progress
+- C# tutorial for beginners - 7. String in-depth: Completed
