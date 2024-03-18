@@ -10,3 +10,7 @@
 - C# tutorial for beginners - 5. Arrays in-depth: Completed
 
 - C# tutorial for beginners - 7. String in-depth: Completed
+
+- C# tutorial for beginners - 8. List explained simply: Completed
+
+- C# tutorial for beginners - 9. If else statements & ternary operators

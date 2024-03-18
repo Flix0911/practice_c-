@@ -277,25 +277,24 @@
 
 // String is a reference type
 
-using System.Text;
 
-string testString = "test";
+// string testString = "test";
 // Above is what is going on at the lower level ~ string think ""
 // Char is a single quote
 // Str is made of char and converted to a CLR at runtime
-char[] testLowLevel = new[] {'t', 'e', 's', 't'};
+// char[] testLowLevel = new[] {'t', 'e', 's', 't'};
 
 // Uppercase String
 // Is there a difference, no difference in Microsoft's eyes. Treat as equalivant
-String testStringStatic = "testSta";
+// String testStringStatic = "testSta";
 
 // String is going to have more extension Methods
 
 // How do we initialize a string
 
-string message; //null value
+// string message; //null value
 
-string message2 = null; //can initialize as null
+// string message2 = null; //can initialize as null
 
 // IMPORTANT IMPORTANT IMPORTANT - VALUE TYPES CANNOT BE NULL
 // int testInt = null; //Can't do that with an int, only a str can initialize as a null
@@ -305,40 +304,76 @@ string message2 = null; //can initialize as null
 
 // Literal ~ seen in file paths
 // Will use string escape sequences
-string filePath = "c:\\ProgramFiles";
+// string filePath = "c:\\ProgramFiles";
 
 // Verbatim
-string filePathVerbatim = @"c:\ProgramFiles";
+// string filePathVerbatim = @"c:\ProgramFiles";
 
 // str in c# are immutable
 // str immutability (Read only) - Garbage Collector will pick up the old variable
 // Threading - Race Conditions ~ If 2 variables accessing at the same time, can cause race conditions
 // Immutability helps reduce threading issues
 
-string s1 = "Hello ";
-string s2 = s1;
-s1 += "World";
+// string s1 = "Hello ";
+// string s2 = s1;
+// s1 += "World";
 
-Console.WriteLine(s2);
+// Console.WriteLine(s2);
 
 // string interpolation + composite formatting
 
-string firstName = "Erick";
-string lastName = "Valencia";
+// string firstName = "Erick";
+// string lastName = "Valencia";
 
 // string interpolation
 
-Console.WriteLine($"My name is {firstName} {lastName}", "String interpolation");
+// Console.WriteLine($"My name is {firstName} {lastName}", "String interpolation");
 
 // composite formatting
 
-Console.WriteLine("My name {0} {1}", firstName, lastName, "composite formatting");
+// Console.WriteLine("My name {0} {1}", firstName, lastName, "composite formatting");
 
 // String builder
 // if you are performing a thousand examples: For loop with 1000 examples
 
 // Create the object and you need to append
-var sb = new StringBuilder();
+// var sb = new StringBuilder();
 
- var testStringBuilder = sb.Append(firstName);
-Console.WriteLine(lastName);
+// var testStringBuilder = sb.Append(firstName);
+// Console.WriteLine(lastName);
+
+// ------------------------------------------
+
+// Lesson 8
+
+// List in c#
+// Will be a very common data structure that you see
+
+// List is a supped up array, with more extension methods
+
+// create our own object
+
+// I am going to have a list of int, nothing else is allowed
+// new (it's a reference type) you need to use the new keyword
+// you're putting it on the stack which is why you need the new, it's a new object
+
+// Notice how vscode pulled this using in
+using HelloWorldTutorial;
+
+List<Part> lst = new List<Part>();
+
+// This is what we just created, chisled our object
+// Now, lets add parts to it
+lst.Add(new Part { PartName = "Headlight", partId = 1 });
+lst.Add(new Part { PartName = "Bumper", partId = 2 });
+
+// Console.WriteLine(lst); //System.Collections.Generic.List`1[HelloWorldTutorial.Part] ~ spits this out
+
+foreach(Part part in lst)
+{
+    // as part ~ returned HelloWorldTutorial.part
+    // as part.PartName ~ returned the name of the part
+    // ToString is a method that turns it into a str
+    Console.WriteLine(part.PartName.ToString());
+    Console.WriteLine(part.partId.ToString());
+}
