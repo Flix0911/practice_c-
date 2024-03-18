@@ -190,25 +190,81 @@
 // Computer is storing data on what type it is, and storing on the stack vs the heap. ~ Lets learn what's the difference
 
 // int, named testValue, that is 4 ~ pretty low level
-using PracticeTutorial;
+// using PracticeTutorial;
 
-int testValue = 4;
+// int testValue = 4;
 // very low level
-byte lowLevelValue = 3;
+// byte lowLevelValue = 3;
 // Boolean value
-bool boolValue = false; //stored on the stack ~ small value
+// bool boolValue = false; //stored on the stack ~ small value
 
 // string ~ value type
-string stringValue = "string";
+// string stringValue = "string";
 
-Console.WriteLine(stringValue);
+// Console.WriteLine(stringValue);
 
 // control + . to bring it in
 // This is a big object ~ it's labeled and you can get it when you want to
-MyNewClass stackHeap = new MyNewClass();
+// MyNewClass stackHeap = new MyNewClass();
 
-stackHeap.AddFive(1);
+// stackHeap.AddFive(1);
 
 // Stack hgas to be accessed exactly as it sounds ~ small sources of data {stack is for value types}
 // Heap, has no structure/order, you can pull from it ~ large sources of data {can store large objects or references of data}
 // ****BEGINNERS SAKE****
+
+
+// ------------------------------------------
+
+
+// Lesson 5
+// Arrays in depth
+// Collection of fixed sets of values
+// Used to store multiple values in a single variable
+
+// Array is good when you know what the values are, and can quickly pull them out
+// Not good if you have a large collection of values
+
+// C# is more opinionated ~ you must be more explicit
+// Fixed and Dynamic array
+
+// Fixed will be faster
+// Dynamic is slower but can be manipulated
+
+// fixed array below
+// Array is a reference type/value ~ it's stored on the heap, not the stack
+// There is a fixed amount of data that can go into the data
+// Below case has 2 points in the array
+
+// int[] ~ array of ints
+// intArray is the name of the array
+// new int[2] ~ going to tel lit to correct the array ~ newing up ~ creating an object
+int[] intArray = new int[2];
+
+// string is a reference type and will be null ~ not 0
+string[] strArray = new string[2];
+
+// declared an object ~ don't do this. You can put anything you want, but it's dangerous and could be multiple data types
+// initialize 4 null values
+object[] objArray = new object[4];
+
+// bracket notation below
+intArray[0] = 1;
+
+Console.WriteLine(intArray);
+
+// dynamic arrays
+
+
+int[] staticIntArray = new int[] {1,2,3,4,5};
+
+// pick certain ones out, linq
+// Array.
+
+// Average() is a method
+// Notice after the . a lot of methods
+staticIntArray.Average();
+// Right click on array and look at definitions
+Array.Sort(staticIntArray);
+
+Console.WriteLine(staticIntArray);

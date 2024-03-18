@@ -7,4 +7,6 @@
 
 - C# tutorial for beginners - 4. Stack vs. Heap (Compiler deep dive): Completed
 
-- C# tutorial for beginners - 5. Arrays in-depth: In Progress
+- C# tutorial for beginners - 5. Arrays in-depth: Completed
+
+- C# tutorial for beginners - 6. String in-depth: In-progress
