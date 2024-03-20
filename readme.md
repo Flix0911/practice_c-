@@ -14,3 +14,5 @@
 - C# tutorial for beginners - 8. List explained simply: Completed
 
 - C# tutorial for beginners - 9. If else statements & ternary operators
+
+- quick note
