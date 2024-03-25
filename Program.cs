@@ -371,9 +371,9 @@
 
 // foreach(Part part in lst)
 // {
-    // as part ~ returned HelloWorldTutorial.part
-    // as part.PartName ~ returned the name of the part
-    // ToString is a method that turns it into a str
+// as part ~ returned HelloWorldTutorial.part
+// as part.PartName ~ returned the name of the part
+// ToString is a method that turns it into a str
 //     Console.WriteLine(part.PartName.ToString());
 //     Console.WriteLine(part.partId.ToString());
 // }
@@ -383,49 +383,49 @@
 
 // If/Else conditionals in C#
 
-var test = 0;
-var test3 = 3;
+// var test = 0;
+// var test3 = 3;
 
-if (test == 1)
-{
-    Console.WriteLine("This part is executed");
-}
-else
-{
-    Console.WriteLine("I don't know what you want, but I ran");
-}
+// if (test == 1)
+// {
+//     Console.WriteLine("This part is executed");
+// }
+// else
+// {
+//     Console.WriteLine("I don't know what you want, but I ran");
+// }
 
 // Need to learn conditional statements
-bool isEqual = 5 == 5; //Will evaluate as true ~ 5 is equal (==) to true
-bool notEqual = 5 != 1; //Will evaluate as true ~ 5 is not equal (!=) to 1
+// bool isEqual = 5 == 5; //Will evaluate as true ~ 5 is equal (==) to true
+// bool notEqual = 5 != 1; //Will evaluate as true ~ 5 is not equal (!=) to 1
 
-bool greaterThan = 5 > 2; //Will evaulate as true ~ 5 is greater (>) to 2
-bool lessThan = 1 < 6; //Will evaulaute as true ~ 1 is less (<) than 6
-bool greaterThanEqual = 5 >= 5; //Will evaulate as true ~ 5 is greater than or equal (>=) to 5
-bool lessThanEqual = 7 <= 7; //Will evauluate as true ~ 7 is less than or equal (<=) to 7
+// bool greaterThan = 5 > 2; //Will evaulate as true ~ 5 is greater (>) to 2
+// bool lessThan = 1 < 6; //Will evaulaute as true ~ 1 is less (<) than 6
+// bool greaterThanEqual = 5 >= 5; //Will evaulate as true ~ 5 is greater than or equal (>=) to 5
+// bool lessThanEqual = 7 <= 7; //Will evauluate as true ~ 7 is less than or equal (<=) to 7
 
 // AND OR
-bool andAnd = 5==5 && 3 != 7; //Will evaluate as true ~ 5 is equal to 5, and 3 is not equal to 7
-bool orOr = 5 == 5 || 3 == 7; //Will evaluate as true ~ only need 1 to be true ~ 5 is equal to 5
+// bool andAnd = 5==5 && 3 != 7; //Will evaluate as true ~ 5 is equal to 5, and 3 is not equal to 7
+// bool orOr = 5 == 5 || 3 == 7; //Will evaluate as true ~ only need 1 to be true ~ 5 is equal to 5
 
 // evaluating its own scope ~ statement level scope
 // Only allowed 1 of these if
-if ( 5 == 2)
-{
-    Console.WriteLine("True");
-}
+// if ( 5 == 2)
+// {
+//     Console.WriteLine("True");
+// }
 
 // Can have as many else if as you want
-else if(3 == 2)
-{
-    Console.WriteLine("Else if true");
-}
+// else if(3 == 2)
+// {
+//     Console.WriteLine("Else if true");
+// }
 
 // Only one of the below
-else
-{
-    Console.WriteLine("Else true");
-}
+// else
+// {
+//     Console.WriteLine("Else true");
+// }
 
 // for if Else chain, can have 1 if and 1 else
 
@@ -438,8 +438,66 @@ else
 // ? is almost like the else statement
 // true - return first number on the otherside of the ? (10)
 // false - return the 2nd number on the otherside of the ? (5)
-var inlineCondition = 3 > 2 ? 10 : 5; //Will return 10
-var inlineStatementTwo = 4 > 2 ? 5 : 6; //Will return 5
-var inlineStatementFalse = 4 > 10 ? 1 : 8; //Will return 8
+// var inlineCondition = 3 > 2 ? 10 : 5; //Will return 10
+// var inlineStatementTwo = 4 > 2 ? 5 : 6; //Will return 5
+// var inlineStatementFalse = 4 > 10 ? 1 : 8; //Will return 8
 
-Console.WriteLine(inlineStatementFalse);
+// Console.WriteLine(inlineStatementFalse);
+
+
+// ----------------
+// Lesson 10
+
+// Switch statements
+// will do range comparision
+
+// Why would you use a switch statement ~ you have ENUMS
+
+using HelloEnum;
+
+State state = State.Inactive;
+// if you do  State state = 123123; will throw a compiler error
+// if you do int state = 123124; will return active
+
+
+switch (state)
+{
+    case State.Active:
+        Console.WriteLine("Active");
+        break;
+    case State.Inactive:
+        Console.WriteLine("Inactive");
+        break;
+    default:
+        throw new Exception(String.Format("Unknown state: {0}", state));
+}
+// More pleasing syntax ~ codesmell?
+
+// If you use too much or have a very long switch statement, could be a codesmell
+
+// DisplayMeasurement(1);
+
+
+// Void means this function will not return anything
+// Double, whatever is passed in, a double is a decimal
+// void DisplayMeasurement(double measurement)
+// {
+//     switch (measurement)
+//     {
+//         // case
+//         case < 0.0:
+//             Console.WriteLine($"Measured value is {measurement}; too low");
+//             // must always have a break statement
+//             break;
+//         case > 15.0:
+//             Console.WriteLine($"Measured value is {measurement}; too high");
+//             break;
+//         case double.NaN:
+//             Console.WriteLine($"Failed.");
+//             break;
+//         // default ~ nothing you passed in that satifies the above cases
+//         default:
+//             Console.WriteLine($"Measure value is {measurement}");
+//             break;
+//     }
+// }

@@ -15,5 +15,7 @@
 
 - C# tutorial for beginners - 9. If else statements & ternary operators: Completed
 
-- C# Tutorial for beginner - 10. Switch Statements
+- C# Tutorial for beginners - 10. Switch Statements: Completed
+
+- C# Tutorial for beginners - 11. For loops & forEach
 
