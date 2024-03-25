@@ -358,22 +358,88 @@
 // you're putting it on the stack which is why you need the new, it's a new object
 
 // Notice how vscode pulled this using in
-using HelloWorldTutorial;
+// using HelloWorldTutorial;
 
-List<Part> lst = new List<Part>();
+// List<Part> lst = new List<Part>();
 
 // This is what we just created, chisled our object
 // Now, lets add parts to it
-lst.Add(new Part { PartName = "Headlight", partId = 1 });
-lst.Add(new Part { PartName = "Bumper", partId = 2 });
+// lst.Add(new Part { PartName = "Headlight", partId = 1 });
+// lst.Add(new Part { PartName = "Bumper", partId = 2 });
 
 // Console.WriteLine(lst); //System.Collections.Generic.List`1[HelloWorldTutorial.Part] ~ spits this out
 
-foreach(Part part in lst)
-{
+// foreach(Part part in lst)
+// {
     // as part ~ returned HelloWorldTutorial.part
     // as part.PartName ~ returned the name of the part
     // ToString is a method that turns it into a str
-    Console.WriteLine(part.PartName.ToString());
-    Console.WriteLine(part.partId.ToString());
+//     Console.WriteLine(part.PartName.ToString());
+//     Console.WriteLine(part.partId.ToString());
+// }
+
+
+// Less 9
+
+// If/Else conditionals in C#
+
+var test = 0;
+var test3 = 3;
+
+if (test == 1)
+{
+    Console.WriteLine("This part is executed");
 }
+else
+{
+    Console.WriteLine("I don't know what you want, but I ran");
+}
+
+// Need to learn conditional statements
+bool isEqual = 5 == 5; //Will evaluate as true ~ 5 is equal (==) to true
+bool notEqual = 5 != 1; //Will evaluate as true ~ 5 is not equal (!=) to 1
+
+bool greaterThan = 5 > 2; //Will evaulate as true ~ 5 is greater (>) to 2
+bool lessThan = 1 < 6; //Will evaulaute as true ~ 1 is less (<) than 6
+bool greaterThanEqual = 5 >= 5; //Will evaulate as true ~ 5 is greater than or equal (>=) to 5
+bool lessThanEqual = 7 <= 7; //Will evauluate as true ~ 7 is less than or equal (<=) to 7
+
+// AND OR
+bool andAnd = 5==5 && 3 != 7; //Will evaluate as true ~ 5 is equal to 5, and 3 is not equal to 7
+bool orOr = 5 == 5 || 3 == 7; //Will evaluate as true ~ only need 1 to be true ~ 5 is equal to 5
+
+// evaluating its own scope ~ statement level scope
+// Only allowed 1 of these if
+if ( 5 == 2)
+{
+    Console.WriteLine("True");
+}
+
+// Can have as many else if as you want
+else if(3 == 2)
+{
+    Console.WriteLine("Else if true");
+}
+
+// Only one of the below
+else
+{
+    Console.WriteLine("Else true");
+}
+
+// for if Else chain, can have 1 if and 1 else
+
+// How do we refactor the above
+
+// We can do a ternary operator ~ inline conditional
+// Ternary is JS
+// Inline is C#
+
+// ? is almost like the else statement
+// true - return first number on the otherside of the ? (10)
+// false - return the 2nd number on the otherside of the ? (5)
+var inlineCondition = 3 > 2 ? 10 : 5; //Will return 10
+var inlineStatementTwo = 4 > 2 ? 5 : 6; //Will return 5
+var inlineStatementFalse = 4 > 10 ? 1 : 8; //Will return 8
+
+Console.WriteLine(inlineStatementFalse);

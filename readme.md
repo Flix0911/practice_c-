@@ -13,6 +13,7 @@
 
 - C# tutorial for beginners - 8. List explained simply: Completed
 
-- C# tutorial for beginners - 9. If else statements & ternary operators
+- C# tutorial for beginners - 9. If else statements & ternary operators: Completed
 
-- quick note
+- C# Tutorial for beginner - 10. Switch Statements
+
