@@ -453,24 +453,24 @@
 
 // Why would you use a switch statement ~ you have ENUMS
 
-using HelloEnum;
+// using HelloEnum;
 
-State state = State.Inactive;
+// State state = State.Inactive;
 // if you do  State state = 123123; will throw a compiler error
 // if you do int state = 123124; will return active
 
 
-switch (state)
-{
-    case State.Active:
-        Console.WriteLine("Active");
-        break;
-    case State.Inactive:
-        Console.WriteLine("Inactive");
-        break;
-    default:
-        throw new Exception(String.Format("Unknown state: {0}", state));
-}
+// switch (state)
+// {
+//     case State.Active:
+//         Console.WriteLine("Active");
+//         break;
+//     case State.Inactive:
+//         Console.WriteLine("Inactive");
+//         break;
+//     default:
+//         throw new Exception(String.Format("Unknown state: {0}", state));
+// }
 // More pleasing syntax ~ codesmell?
 
 // If you use too much or have a very long switch statement, could be a codesmell
@@ -501,3 +501,71 @@ switch (state)
 //             break;
 //     }
 // }
+
+// ------------
+//Lesson 11
+
+// For Loops & ForEach
+
+// Psuedo code
+
+
+// 1st is the initializer, then condition, then finall interator
+// for(initializer, condition, interator)
+//  {
+//      do some task over and over
+// }
+// 
+
+// int is representative of a datatype
+// i is the variable name
+// run while i is less than 10
+// i only avaiable in the brackets, it's only scoped there
+// formal way
+for(int i = 0; i < 20; i++)
+{
+    Console.WriteLine($"Value of {i}");
+}
+
+// modify the below so it reverses
+for(int i = 10; i > 0; i--)
+{
+    Console.WriteLine($"Value of {i}");
+}
+
+
+// declare list for fib sequence
+// Below is a list 
+var fibNumbers = new List<int> {0, 1, 1, 2, 3, 5, 8, 13};
+
+// More common ~ ForEach
+// make syntax more pleasing
+// element will be the 1st 1 in the list
+foreach(int element in fibNumbers)
+{
+    Console.WriteLine($"Value of {element}");
+    Console.WriteLine($"Iteration");
+}
+
+// This is actually a char
+string fibNumbers2 = "0, 1, 1, 2, 3";
+
+// More common ~ ForEach
+// make syntax more pleasing
+// element will be the 1st 1 in the list
+foreach(char element in fibNumbers2)
+{
+    Console.WriteLine($"Value of {element}");
+    Console.WriteLine($"Iteration");
+}
+
+// Lets do an array
+int[] numbers = new int[] {3, 14, 15, 92, 6};
+// More common ~ ForEach
+// make syntax more pleasing
+// element will be the 1st 1 in the list
+foreach(int element in numbers)
+{
+    Console.WriteLine($"Value of {element}");
+    Console.WriteLine($"Iteration");
+}

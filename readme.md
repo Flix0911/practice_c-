@@ -19,3 +19,4 @@
 
 - C# Tutorial for beginners - 11. For loops & forEach
 
+- C# Tutorial for beginners - 12. Interfaces
